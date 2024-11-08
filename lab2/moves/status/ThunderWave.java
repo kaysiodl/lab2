@@ -18,7 +18,7 @@ public final class ThunderWave extends StatusMove {
         Effect eff = new Effect();
         eff.paralyze(pokemon);
         eff.turns(0);
-        eff.attack(0.25);
+        eff.attack(0.75);
         eff.stat(Stat.SPEED, (int)pokemon.getStat(Stat.SPEED) / 2);
         pokemon.addEffect(eff);
     }
