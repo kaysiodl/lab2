@@ -6,7 +6,7 @@ import ru.ifmo.se.pokemon.*;
  * Стальное крыло наносит урон и с вероятностью 10% повышает защиту пользователя на один уровень.
  */
 
-public class SteelWing extends PhysicalMove {
+public final class SteelWing extends PhysicalMove {
     public SteelWing(){
         super(Type.STEEL, 70, 90);
     }
