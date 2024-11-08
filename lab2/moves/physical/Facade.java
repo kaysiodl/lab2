@@ -1,7 +1,7 @@
 package ru.itmo.lab2.moves.physical;
 
 import ru.ifmo.se.pokemon.Pokemon;
-import ru.ifmo.se.pokemon.SpecialMove;
+import ru.ifmo.se.pokemon.PhysicalMove;
 import ru.ifmo.se.pokemon.Type;
 
 /**
@@ -9,7 +9,7 @@ import ru.ifmo.se.pokemon.Type;
  * если пользователь обожжен, отравлен или парализован
  */
 
-public final class Facade extends SpecialMove {
+public final class Facade extends PhysicalMove {
     public Facade() {
         super(Type.NORMAL, 70, 100);
     }
