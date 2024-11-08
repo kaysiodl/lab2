@@ -8,7 +8,7 @@ import ru.ifmo.se.pokemon.*;
  * electric, 0, 90
  */
 
-public class ThunderWave extends StatusMove {
+public final class ThunderWave extends StatusMove {
     public ThunderWave(){
         super(Type.ELECTRIC, 0, 90);
     }
