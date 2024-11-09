@@ -1,7 +1,8 @@
 package ru.itmo.lab2.moves.physical;
 
-import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.PhysicalMove;
+import ru.ifmo.se.pokemon.Pokemon;
+import ru.ifmo.se.pokemon.Status;
 import ru.ifmo.se.pokemon.Type;
 
 /**
@@ -19,13 +20,12 @@ public final class Facade extends PhysicalMove {
     protected double calcBaseDamage(Pokemon pokemon1, Pokemon pokemon2) {
         double damage = super.calcBaseDamage(pokemon1, pokemon2);
 
-        switch (pokemon1.getCondition()) {
-            case BURN, POISON, PARALYZE:
-                f = true;
-                return damage*2;
-            default:
-                return damage;
+        Status condition = pokemon1.getCondition();
+        if (condition == Status.BURN | condition == Status.PARALYZE | condition == Status.POISON){
+            f = true;
+            damage *= 2;
         }
+        return damage;
     }
 
     @Override
