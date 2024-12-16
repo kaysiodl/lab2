@@ -1,0 +1,61 @@
+\documentclass[12pt, onecolumn]{article}
+% Поддержка языков
+\usepackage[english, russian]{babel} 
+
+% Настройка кодировок
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+% пакеты для математики
+\usepackage{amsmath, amsfonts, amssymb, amsthm, mathtools} 
+
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usetikzlibrary{angles,quotes}
+\usepackage{newtxmath}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage{newtxmath}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+\begin{document}
+\begin{tikzpicture}
+    \tikzstyle{arrow}=[thick,->,>=stealth]
+    \tikzstyle{arrow_two}=[thick,<->,>=stealth]
+	%Задаем точки
+	\coordinate (O) at (0,0);
+	\coordinate (C) at (0,-7);
+	\coordinate (A) at (4, -5);
+    \coordinate (l) at (-0.2, -2.5);
+    \coordinate (h) at (3.2, -5.6);
+
+	% Подписываем точки
+    \filldraw[black] (-0.1, -6.4) circle (0pt) node[anchor=east]{0};
+    \filldraw[black] (O) circle (0pt) node[anchor=west]{};
+    \filldraw[black] (4, -5.3) circle (0pt) node[anchor=north]{A};
+    \filldraw[black] (l) circle (0pt) node[anchor=north]{$l$};
+    \filldraw[black] (h) circle (0pt) node[anchor=north]{$h$};
+    \filldraw[black] (0, -8.2) circle (0pt) node[anchor=north]{$v_m$};
+    \filldraw[black] (5, -4.9) circle (0pt) node[anchor=north]{$v=0$};
+    
+
+    
+	% Линии
+    \draw[line width=0.5mm] (B) -- (A);
+	\draw[line width=0.5mm] (B) -- (C);
+    \draw[line width=0.5mm] (-2, 0) -- (3, 0);
+    \draw[line width=0.5mm, dotted] (A) -- (0, -5);
+    \draw[line width=0.5mm, dotted] (4, -7) -- (0, -7);
+    \draw[fill=black](4, -5) circle (3mm);
+    \draw[fill=black](0, -7) circle (3mm);
+    \draw[arrow, line width=0.5mm] (C) -- (-3, -7);
+    \draw[arrow_two, line width=0.5mm] (3.5, -5) -- (3.5, -7);
+    \draw[arrow, line width=0.5mm] (0, -8) -- (-2, -8);
+             
+
+\end{tikzpicture}
+\end{document}
