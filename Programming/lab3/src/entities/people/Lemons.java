@@ -1,6 +1,5 @@
 package entities.people;
 
-// можно просто common.*
 import common.CanSettle;
 import common.CanCreate;
 import common.CanFishing;
