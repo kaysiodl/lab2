@@ -52,9 +52,9 @@ public abstract class Person {
         this.profession = profession;
     }
 
-    public void setBoredLevel(int level) throws NegativeLevelOfBoredException {
+    public void setBoredLevel(int levelOfBored) throws NegativeLevelOfBoredException {
         if (levelOfBored < 0) throw new NegativeLevelOfBoredException(0);
-        this.levelOfBored = level;
+        this.levelOfBored = levelOfBored;
     }
 
     @Override
