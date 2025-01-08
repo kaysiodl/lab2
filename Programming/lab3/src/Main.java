@@ -19,10 +19,7 @@ public class Main {
         //Person
         Lemons lemons = new Lemons("Лимончики", 4);
         Petrushka petrushka = new Petrushka("Петрушка", 0);
-
-        lemons.getProfession();
-        petrushka.getProfession();
-
+        
 
         //Place
         Park park = new Park("Парк");
