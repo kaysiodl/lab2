@@ -1,7 +1,7 @@
 package entities.items;
 
 public class Fish extends Item{
-    private String color = "прозрачных";
+    private String color;
 
     public Fish(String name, String color){
         super(name);
