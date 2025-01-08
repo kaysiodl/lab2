@@ -14,8 +14,6 @@ public abstract class Person implements HasPronoun {
 
     protected int levelOfBored;
 
-    protected Profession profession;
-
     public Person(String name, int levelOfBored){
 
         try {
@@ -36,9 +34,7 @@ public abstract class Person implements HasPronoun {
         return this.name;
     }
 
-    public Profession getProfession(){
-        return this.profession;
-    }
+    public abstract Profession getProfession();
 
     public int getBoredLevel(){
         return this.levelOfBored;
@@ -47,10 +43,6 @@ public abstract class Person implements HasPronoun {
     public void setName(String name) throws NameTooShortException {
         if (name.length() < shortestNameLength) throw new NameTooShortException(shortestNameLength);
         this.name = name;
-    }
-
-    public void setProfession(Profession profession){
-        this.profession = profession;
     }
 
     public void setBoredLevel(int levelOfBored) throws NegativeLevelOfBoredException {
@@ -68,12 +60,12 @@ public abstract class Person implements HasPronoun {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return levelOfBored == person.levelOfBored && Objects.equals(name, person.name) && Objects.equals(profession, person.profession);
+        return levelOfBored == person.levelOfBored && Objects.equals(name, person.name);
     }
 
     @Override
     public String toString() {
-        if (this.profession != null) return this.profession.getText() + " " + this.name;
+        if (getProfession() != null) return getProfession().getText() + " " + this.name;
         else return this.name;
     }
 }
