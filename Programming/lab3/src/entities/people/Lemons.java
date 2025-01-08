@@ -1,8 +1,8 @@
 package entities.people;
 
 import common.Profession;
-import entities.items.Item;
-import entities.places.Place;
+import entities.items.*;
+import entities.places.*;
 
 public class Lemons extends Person {
 
@@ -15,28 +15,28 @@ public class Lemons extends Person {
         return Profession.SOLDIER;
     }
 
-    public String create(Item item) {
-        return "придумывать " + item.toString();
+    public String create(Fun fun) {
+        return "придумывать " + fun.toString();
     }
 
 
-    public String settle(Place place) {
-        return "расположились " + place.toString();
+    public String settle(Park park) {
+        return "расположились " + park.toString();
     }
 
 
-    public String fishing(Item item) {
-        return "удить " + item.toString();
+    public String fishing(Fish fish) {
+        return "удить " + fish.toString();
     }
 
 
-    public String read(Item item) {
-        return "читали " + item.toString();
+    public String read(Advertisement advertisement) {
+        return "читали " + advertisement.toString();
     }
 
 
-    public String shoot(Item item) {
-        return "стрелять в цель" + item.toString();
+    public String shoot(Glass glass) {
+        return "стрелять в цель" + glass.toString();
     }
 
 
