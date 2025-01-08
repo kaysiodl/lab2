@@ -19,7 +19,6 @@ public class Main {
         //Person
         Lemons lemons = new Lemons("Лимончики", 4);
         Petrushka petrushka = new Petrushka("Петрушка", 0);
-        
 
         //Place
         Park park = new Park("Парк");
@@ -28,13 +27,11 @@ public class Main {
 
         //Item
         Advertisement advertisement = new Advertisement("объявление", petrushka);
-        Fish fish = new Fish("рыбки");
+        Fish fish = new Fish("рыбки", "золотых");
         Flower flower = new Flower("цветы");
         Fun fun = new Fun("забавы");
         Glass glass = new Glass("стекло", greenhouse);
         Grass grass = new Grass("трава");
-
-        fish.setColor("золотых");
 
         //Sentences
         Sentence firstSentence = new Sentence(proverb.content());
