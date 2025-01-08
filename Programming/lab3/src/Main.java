@@ -20,8 +20,8 @@ public class Main {
         Lemons lemons = new Lemons("Лимончики", 4);
         Petrushka petrushka = new Petrushka("Петрушка", 0);
 
-        lemons.setProfession(Profession.SOLDIER);
-        petrushka.setProfession(Profession.SENIOR);
+        lemons.getProfession();
+        petrushka.getProfession();
 
 
         //Place
