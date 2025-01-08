@@ -3,15 +3,8 @@ package entities.items;
 public class Fish extends Item{
     private String color = "прозрачных";
 
-    public Fish(String name){
+    public Fish(String name, String color){
         super(name);
-    }
-
-    public String getColor(String color){
-        return this.color;
-    }
-
-    public void setColor(String color){
         this.color = color;
     }
 
