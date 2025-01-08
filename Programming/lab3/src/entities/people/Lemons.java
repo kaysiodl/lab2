@@ -1,5 +1,6 @@
 package entities.people;
 
+import common.Profession;
 import entities.items.Item;
 import entities.places.Place;
 
@@ -7,6 +8,11 @@ public class Lemons extends Person {
 
     public Lemons(String name, int levelOfBored){
         super(name, levelOfBored);
+    }
+
+    @Override
+    public Profession getProfession(){
+        return Profession.SOLDIER;
     }
 
     public String create(Item item) {
